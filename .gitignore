@@ -555,3 +555,6 @@ sketch
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,aspnetcore,csharp,sass,macos,vscode,react
+
+**/.cache
+**/dist

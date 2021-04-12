@@ -26,7 +26,7 @@ namespace SoutheasternStats
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/build";
+                configuration.RootPath = "ClientApp/dist";
             });
         }
 
@@ -63,7 +63,8 @@ namespace SoutheasternStats
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    // React server must be started in a separate thread first
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:1234");
                 }
             });
         }

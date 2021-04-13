@@ -1,4 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.css';
+// Parcel imports
+import * as bootstrap from "bootstrap";
+import "./scss/Custom.scss";
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';

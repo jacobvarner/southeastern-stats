@@ -1,6 +1,13 @@
-import React, { Component } from 'react';
+import React from "react";
 
-export class FetchData extends Component {
+interface IFetchDataProps { };
+
+interface IFetchDataState {
+  forecasts: [],
+  loading: boolean;
+}
+
+export default class FetchData extends React.Component<IFetchDataProps, IFetchDataState> {
   static displayName = FetchData.name;
 
   constructor(props) {
@@ -14,7 +21,7 @@ export class FetchData extends Component {
 
   static renderForecastsTable(forecasts) {
     return (
-      <table className='table table-striped' aria-labelledby="tabelLabel">
+      <table className="table table-striped" aria-labelledby="tabelLabel">
         <thead>
           <tr>
             <th>Date</th>
@@ -52,7 +59,7 @@ export class FetchData extends Component {
   }
 
   async populateWeatherData() {
-    const response = await fetch('weatherforecast');
+    const response = await fetch("weatherforecast");
     const data = await response.json();
     this.setState({ forecasts: data, loading: false });
   }

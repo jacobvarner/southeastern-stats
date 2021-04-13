@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
-import { NavMenu } from './NavMenu';
+import React from "react";
+import NavMenu from "./NavMenu";
 
-export class Layout extends Component {
+interface ILayoutProps { };
+interface ILayoutState { };
+
+export default class Layout extends React.Component<ILayoutProps, ILayoutState> {
   static displayName = Layout.name;
 
   render() {

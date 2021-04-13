@@ -558,3 +558,4 @@ sketch
 
 **/.cache
 **/dist
+**/.parcel-cache

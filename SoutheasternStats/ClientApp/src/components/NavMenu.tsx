@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-export class NavMenu extends Component {
+interface INavMenuProps { };
+
+interface INavMenuState {
+  collapsed: boolean;
+}
+
+export default class NavMenu extends React.Component<INavMenuProps, INavMenuState> {
   static displayName = NavMenu.name;
 
   constructor(props) {
